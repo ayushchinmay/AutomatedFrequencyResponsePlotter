@@ -1,6 +1,21 @@
 # Automated Frequency Response Plotter
 Python script that allows the users to sweep over a specified range of frequencies, calculate the frequency/phase response, and generate a bode-plot for any given physical-circuit.
 
+# Program Description
+The program flow consists of the following processes:
+![Program Execution Flowchart](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/program-flow.png)
+* Find the device ID to create a VISA instrument control resource object.
+* Initialize the oscilloscope to default settings and check for errors.
+* If no errors were encountered, take user input for start/stop frequencies and the number of iteration steps.
+* Start the waveform generator on the oscilloscope at the starting frequency, and autoscale to get a good view of the waveform.
+* Step through the frequencies with increments calculated from the desired number of iterations
+* Get the waveform measurements such as input/output signal frequency, amplitude (peak-to-peak) and the phase difference
+* If the measurements captured are valid, save them to a *`.csv`* file with the following column headers:
+       `CH1_FREQ [Hz], CH1_AMPL [Vpp], CH2_FREQ [Hz], CH2_AMPL [Vpp], PHASE_DIFF [Deg], GAIN [dB]`
+* Once measurements are made for all the frequencies in the provided range, plot the frequency (magnitude) response and the phase response of the given circuit.
+* Display the Bode-plot and save the figure as a *`.png`* image.
+* Exit the program.
+
 ## Getting Started
 
 ### Hardware Requirements
