@@ -3,7 +3,7 @@ Python script that allows the users to sweep over a specified range of frequenci
 
 # Program Description
 The program flow consists of the following processes:
-![Program Execution Flowchart](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/program-flow.png =311x701)
+![Program Execution Flowchart](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/program-flow.png)
 * Find the device ID to create a VISA instrument control resource object.
 * Initialize the oscilloscope to default settings and check for errors.
 * If no errors were encountered, take user input for start/stop frequencies and the number of iteration steps.
