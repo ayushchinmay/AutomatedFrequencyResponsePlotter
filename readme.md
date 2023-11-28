@@ -20,6 +20,7 @@ Python script that allows the users to sweep over a specified range of frequenci
 * [Python 3](https://www.python.org/downloads/)
 
 ### Setting up Software
+* Download the project *.zip* folder by clicking **'<> Code'** dropdown menu and selecting **'Download ZIP'**
 * Download & install the NI Drivers listed under the dependencies
 * Download the IVI Foundation Shared Components
      Ensure the presence of GlobMgr.dll at the following location: *`"C:/Program Files (x86)/IVI Foundation/VISA/VisaCom/GlobMgr.dll"`*
@@ -29,7 +30,7 @@ Python script that allows the users to sweep over a specified range of frequenci
     * [pyVisa](https://pypi.org/project/PyVISA/)
 
 ### Cable Connections
-![Illustration of Cable Connections for Testing Circuit]()
+![Illustration of Cable Connections for Testing Circuit](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/cable-connection-illustration.png)
 * Connect the USB A-to-B Cable (USB-B) end behind the Oscilloscope, and the other end (USB-A) into the computer.
 * Use 2×BNC-Banana cables to split the **`GEN-OUT`** port output such that one end is INPUT into the **`CIRCUIT`**, and another into **`CHANNEL-1`** of the oscilloscope. 
 * Attach another BNC-Banana cable to connect the output of the **`CIRCUIT`** into **`CHANNEL-2`** of the oscilloscope.
@@ -44,9 +45,9 @@ Python script that allows the users to sweep over a specified range of frequenci
         * Number of Steps: 25 steps
 * Once the program execution is completed, a figure displaying the Frequency Response plot will appear
     * The file containing the captured data can be found in `../Data/` folder as a `.csv` file with the name-format: *'Bode_MM-DD-YYYY_HR-MIN-SEC.csv'* (see image below)
-[Screenshot of a sample data-file]()
+[Screenshot of a sample data-file](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/data-file-example.png)
     * The bode-plot figure is saved as a `.png` image in `../Img/` folder with the filename: *'Bode_MM-DD-YYYY_HR-MIN-SEC.png'* (see image below)
-[Screenshot of a sample bode-plot]()
+[Screenshot of a sample bode-plot](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/bode-plot-example.png)
 * If any errors are encountered during the program execution, the error will be printed to the command-terminal, and the program will will terminate after saving the data captured until the error.
 
 ## Help
@@ -57,7 +58,7 @@ Python script that allows the users to sweep over a specified range of frequenci
 * Erroneous data can be detected in the following cases:
     * If the frequency of the INPUT Signal is more than 50% of the frequency of OUTPUT Signal
     * If the Frequency or Amplitude of the Output signal reads higher than 10 GHz or 10 GVpp. In these cases, the oscilloscope reads `98.99E36` (see screenshot below).
-![Screenshot of Commandline during Program-Execution]()
+![Screenshot of Commandline during Program-Execution](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/program-execution-example.png)
 
 ## Authors
 - [Ayush Chinmay](https://github.com/ayushchinmay)
@@ -66,6 +67,10 @@ Python script that allows the users to sweep over a specified range of frequenci
 
 ## Version History
 * **0.1**: Initial Release
+
+## Further Developments
+* The current program only supports Aglient DSO-X 3012A oscilloscopes. In the future I intend on modifying the code to support a suite of instruments to configure/capture data.
+* Feel free to make any modifications that may develop the code to support more instruments, or to upgrade the functionality fo the program.
 
 ## Resources
 Some useful resources to keep in mind while utilizing this program...
