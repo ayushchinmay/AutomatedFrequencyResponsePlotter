@@ -1,6 +1,15 @@
 # Automated Frequency Response Plotter
 Python script that allows the users to sweep over a specified range of frequencies, calculate the frequency/phase response, and generate a bode-plot for any given physical-circuit.
 
+## File/Folder Descriptions
+* **/Data: ** Data folder that stores the '.csv' data-files saved by the `FrequencyResponseCapture.py` program
+* **/Img: ** Image folder that stores the '.png' data-files saved by the `FrequencyResponseCapture.py` program
+* **FrequencyResponseCapture.py: ** Python program to sweep frequencies and generate bode-plot
+* **installPythonModules.bat: ** Batch script to install required python modules automatically
+* **interactivePlot.py: ** Python program to open an interactive plot using the data-files saved in the */Data* folder
+* **requirements.txt: ** Text file containing names of the required python modules
+* **README.md: ** README file containing the project description
+
 # Program Description
 The program flow consists of the following processes:
 ![Program Execution Flowchart](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/program-flow.png)
@@ -64,6 +73,8 @@ The program flow consists of the following processes:
     * The bode-plot figure is saved as a `.png` image in `../Img/` folder with the filename: *'Bode_MM-DD-YYYY_HR-MIN-SEC.png'* (see image below)
 ![Screenshot of a sample bode-plot](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/bode-plot-example.png)
 * If any errors are encountered during the program execution, the error will be printed to the command-terminal, and the program will will terminate after saving the data captured until the error.
+* Once the program execution ends, `interactivePlot.py` program can be used to open an interactive-plot in the browser.
+    * The -3dB line is plotted based on the peak-value, which can be useful to find cut-off frequencies.
 
 ## Help
 * Depending on the type of filter, the frequency range to sweep over may vary. Due to the **AUTOSCALE** function of the oscilloscope prioritizing **CHANNEL-1** waveform, if the output amplitude is too low, the measurements made may be erroneous; In such an event, the program will try to re-capture the measurements -- After 5 retries, the program will break out of the loop, save the data and exit.
@@ -81,6 +92,7 @@ The program flow consists of the following processes:
 - Jensen Dygert
 
 ## Version History
+* **0.1.2**: Added Interactive Plot
 * **0.1**: Initial Release
 
 ## Further Developments
