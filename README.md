@@ -2,13 +2,14 @@
 Python script that allows the users to sweep over a specified range of frequencies, calculate the frequency/phase response, and generate a bode-plot for any given physical-circuit.
 
 ## File/Folder Descriptions
-* **[/Data](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/Data/):**  *Data folder that stores the '.csv' data-files saved by the `FrequencyResponseCapture.py` program*
-* **[/Img](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/Img/):**  *Image folder that stores the '.png' data-files saved by the `FrequencyResponseCapture.py` program*
-* **[FrequencyResponseCapture.py](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/FrequencyResponseCapture.py):**  *Python program to sweep frequencies and generate bode-plot*
-* **[installPythonModules.bat](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/installPythonModules.bat):**  *Batch script to install required python modules automatically*
-* **[interactivePlot.py](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/interactivePlot.py):**  *Python program to open an interactive plot using the data-files saved in the */Data* folder*
-* **[requirements.txt](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/requirements.txt):**  *Text file containing names of the required python modules*
-* **[README.md](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/README.md):**  *README file containing the project description*
+* **[/Data](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/tree/main/Data):**  *Data folder that stores the '.csv' data-files saved by the `FrequencyResponseCapture.py` program*
+* **[/Img](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/tree/main/Img):**  *Image folder that stores the '.png' data-files saved by the `FrequencyResponseCapture.py` program*
+* **[/readme_references](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/tree/main/readme_references):**  *Folder containing reference images for README*
+* **[FrequencyResponseCapture.py](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/FrequencyResponseCapture.py):**  *Python program to sweep frequencies and generate bode-plot*
+* **[installPythonModules.bat](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/installPythonModules.bat):**  *Batch script to install required python modules automatically*
+* **[interactivePlot.py](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/interactivePlot.py):**  *Python program to open an interactive plot using the data-files saved in the */Data* folder*
+* **[requirements.txt](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/requirements.txt):**  *Text file containing names of the required python modules*
+* **[README.md](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/README.md):**  *README file containing the project description*
 
 # Program Description
 The program flow consists of the following processes:
@@ -74,7 +75,8 @@ The program flow consists of the following processes:
 ![Screenshot of a sample bode-plot](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/bode-plot-example.png)
 * If any errors are encountered during the program execution, the error will be printed to the command-terminal, and the program will will terminate after saving the data captured until the error.
 * Once the program execution ends, `interactivePlot.py` program can be used to open an interactive-plot in the browser.
-    * The -3dB line is plotted based on the peak-value, which can be useful to find cut-off frequencies.
+    * The -3dB line is plotted based on the peak-value, which can be useful to find cut-off frequencies. (see image below)
+  ![Screenshot of Browser-based Interactive Plot](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/blob/main/readme_references/interactive-plot-example.png)
 
 ## Help
 * Depending on the type of filter, the frequency range to sweep over may vary. Due to the **AUTOSCALE** function of the oscilloscope prioritizing **CHANNEL-1** waveform, if the output amplitude is too low, the measurements made may be erroneous; In such an event, the program will try to re-capture the measurements -- After 5 retries, the program will break out of the loop, save the data and exit.
