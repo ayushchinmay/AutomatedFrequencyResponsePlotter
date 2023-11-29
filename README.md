@@ -2,13 +2,13 @@
 Python script that allows the users to sweep over a specified range of frequencies, calculate the frequency/phase response, and generate a bode-plot for any given physical-circuit.
 
 ## File/Folder Descriptions
-* **/Data:**  *Data folder that stores the '.csv' data-files saved by the `FrequencyResponseCapture.py` program*
-* **/Img:**  *Image folder that stores the '.png' data-files saved by the `FrequencyResponseCapture.py` program*
-* **FrequencyResponseCapture.py:**  *Python program to sweep frequencies and generate bode-plot*
-* **installPythonModules.bat:**  *Batch script to install required python modules automatically*
-* **interactivePlot.py:**  *Python program to open an interactive plot using the data-files saved in the */Data* folder*
-* **requirements.txt:**  *Text file containing names of the required python modules*
-* **README.md:**  *README file containing the project description*
+* **[/Data](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/Data/):**  *Data folder that stores the '.csv' data-files saved by the `FrequencyResponseCapture.py` program*
+* **[/Img](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/Img/):**  *Image folder that stores the '.png' data-files saved by the `FrequencyResponseCapture.py` program*
+* **[FrequencyResponseCapture.py](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/FrequencyResponseCapture.py):**  *Python program to sweep frequencies and generate bode-plot*
+* **[installPythonModules.bat](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/installPythonModules.bat):**  *Batch script to install required python modules automatically*
+* **[interactivePlot.py](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/interactivePlot.py):**  *Python program to open an interactive plot using the data-files saved in the */Data* folder*
+* **[requirements.txt](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/requirements.txt):**  *Text file containing names of the required python modules*
+* **[README.md](https://github.com/ayushchinmay/AutomatedFrequencyResponsePlotter/main/README.md):**  *README file containing the project description*
 
 # Program Description
 The program flow consists of the following processes:
