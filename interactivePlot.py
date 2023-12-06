@@ -111,7 +111,7 @@ def main():
 
 	print("[INFO] Following Data-Files were recognized...")
 	for i, f in enumerate(data_files):
-		print(f"\t[{i+1}] {f}")
+		print(f"\t[{i}] {f}")
 	
 	# Get user input and plot the Bode Plot
 	try:
